@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: l22mtefuu-go-gitops
+  description: This is GitOps manifest for l22mtefuu-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: l22mtefuu-go
+    backstage.io/kubernetes-id: l22mtefuu-go 
+    backstage.io/techdocs-ref: dir:.
+    jenkins.io/job-full-name: l22mtefuu-go-gitops 
+    github.com/project-slug: rhtap-test-organization-jk/l22mtefuu-go-gitops 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:l22mtefuu-go
